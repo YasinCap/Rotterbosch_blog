@@ -6,7 +6,7 @@ var client = contentful.createClient({
   });
 
 export default function ProductPage(props) {
-    return <h1>{props.heading}</h1>
+    return <h1>{JSON.stringify(props)}</h1>
 }
 
 export async function getServerSideProps() {
@@ -15,7 +15,7 @@ export async function getServerSideProps() {
 
     return {
       props: {
-        heading: blog.fields
+        blog
       }, 
     }
   }

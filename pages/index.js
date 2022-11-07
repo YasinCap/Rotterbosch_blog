@@ -22,7 +22,11 @@ export default function Blogposts({posts}) {
   return (
     <div className="blogposts">
       {posts.map(posts => (
-        <div key={posts.sys.id}> {posts.fields.title}</div> 
+        <div key={posts.sys.id}> 
+        
+        <h1>{posts.fields.title}</h1>
+        <img src={posts.fields.coverImage.fields.file.url}></img>
+        </div> 
       ))}
     </div>
   )

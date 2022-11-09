@@ -1,5 +1,5 @@
 import { createClient } from "contentful";
-import { Button } from '../components/components/src/stories/Button';
+// import { Button } from '../components/components/src/stories/Button';
 
 export async function getStaticProps() {
 
@@ -27,11 +27,11 @@ export default function Blogposts({ posts }) {
 
           <h1>{posts.fields.title}</h1>
           <img src={posts.fields.coverImage.fields.file.url}></img>
-          <Button
+          {/* <Button
             label= {posts.fields.title}
             onClick={() => { }}
             primary
-          />
+          /> */}
         </div>
       ))}
     </div>

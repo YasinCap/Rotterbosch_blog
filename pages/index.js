@@ -1,5 +1,6 @@
 import { createClient } from "contentful";
-// import { Button } from '../components/components/src/stories/Button';
+import { Button } from '../components/components/src/stories/Button';
+import Link from "next/link";
 
 export async function getStaticProps() {
 
@@ -26,12 +27,20 @@ export default function Blogposts({ posts }) {
         <div key={posts.sys.id}>
 
           <h1>{posts.fields.title}</h1>
+          <Link href={'/blog/' + posts.fields.title}>
+          {posts.fields.title}
+          </Link>
+          
           <img src={posts.fields.coverImage.fields.file.url}></img>
-          {/* <Button
+          <p>{posts.fields.content.content[0].content[0].value}</p>
+          <h3>{posts.fields.author.fields.name}</h3>
+          <img src={posts.fields.author.fields.picture.fields.file.url}></img>
+          <br></br>
+          <Button
             label= {posts.fields.title}
             onClick={() => { }}
             primary
-          /> */}
+          />
         </div>
       ))}
     </div>

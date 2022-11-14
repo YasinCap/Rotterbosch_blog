@@ -32,7 +32,7 @@ export default function Blogposts({ posts }) {
           </Link>
           
           <img src={posts.fields.coverImage.fields.file.url}></img>
-          <p>{posts.fields.content.content[0].content[0].value}</p>
+          <p>{test123}</p>
           <h3>{posts.fields.author.fields.name}</h3>
           <img src={posts.fields.author.fields.picture.fields.file.url}></img>
           <br></br>

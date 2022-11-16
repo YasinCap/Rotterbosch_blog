@@ -2,8 +2,10 @@ import { createClient } from "contentful";
 import { Button } from '../components/components/src/stories/Button';
 import Link from "next/link";
 
+// Deze functie zorgt ervoor dat next js de pagina pre-rendered en de props die meeworden gegeven worden gereturned.
 export async function getStaticProps() {
-
+// Dit is de const waarin ik mijn persoonlijke api keys, 
+// door middel van enviroment variables next js laat communiceren met contentful
   const client = createClient({
     space: process.env.CONTENTFUL_SPACE_ID,
     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
@@ -27,7 +29,7 @@ export default function Blogposts({ posts }) {
         <div key={posts.sys.id}>
 
           <h1>{posts.fields.title}</h1>
-          <Link href={'/blogs/' + posts.fields.title}>
+          <Link href={'/blogs/' + posts.fields.slug}>
           {posts.fields.title}
           </Link>
           

@@ -33,10 +33,10 @@ export default function Blogposts({ posts }) {
           {posts.fields.title}
           </Link>
           
-          {/* <img src={posts.fields.coverImage.fields.file.url}></img>
+          <img src={posts.fields.coverImage.fields.file.url}></img>
           <p>{posts.fields.content.content[0].content[0].value}</p>
           <h3>{posts.fields.author.fields.name}</h3>
-          <img src={posts.fields.author.fields.picture.fields.file.url}></img> */}
+          <img src={posts.fields.author.fields.picture.fields.file.url}></img>
           <br></br>
           <Button
             label= {posts.fields.title}

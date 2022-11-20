@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import { Button } from '../components/components/src/stories/Button';
 import Link from "next/link";
+import Navbar from '../components/Navbar'
 
 // Deze functie zorgt ervoor dat next js de pagina pre-rendered en de props die meeworden gegeven worden gereturned.
 export async function getStaticProps() {
@@ -24,19 +25,18 @@ export default function Blogposts({ posts }) {
   console.log(posts)
 
   return (
-    <div className="blogposts">
+    <div className="container mx-auto px-10 mb-8 rounded ">
+      <Navbar/>
       {posts.map(posts => (
-        <div key={posts.sys.id}>
-
-          <h1>{posts.fields.title}</h1>
-          <Link href={'/blogs/' + posts.fields.slug}>
+        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 bg-gray-100" key={posts.sys.id}>
+          <Link className="text-3xl m-auto" href={'/blogs/' + posts.fields.slug}>
           {posts.fields.title}
           </Link>
           
-          <img src={posts.fields.coverImage.fields.file.url}></img>
-          <p>{posts.fields.content.content[0].content[0].value}</p>
-          <h3>{posts.fields.author.fields.name}</h3>
-          <img src={posts.fields.author.fields.picture.fields.file.url}></img>
+          <img className="object-cover h-48 w-96 m-auto rounded" src={posts.fields.coverImage.fields.file.url}></img>
+          {/* <p>{posts.fields.content.content[0].content[0].value}</p> */}
+          <h3 className="text-sm">{posts.fields.author.fields.name}</h3>
+          <img className="w-10 rounded" src={posts.fields.author.fields.picture.fields.file.url}></img>
           <br></br>
           <Button
             label= {posts.fields.title}
@@ -44,6 +44,7 @@ export default function Blogposts({ posts }) {
             primary
           />
         </div>
+        
       ))}
     </div>
   )

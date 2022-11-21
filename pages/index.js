@@ -1,7 +1,7 @@
 import { createClient } from "contentful";
 import { Button } from '../components/components/src/stories/Button';
 import Link from "next/link";
-
+import Navbar from '../components/Navbar'
 
 // Deze functie zorgt ervoor dat next js de pagina pre-rendered en de props die meeworden gegeven worden gereturned.
 export async function getStaticProps() {
@@ -26,7 +26,7 @@ export default function Blogposts({ posts }) {
 
   return (
     <div className="container mx-auto px-10 mb-8 rounded ">
-      
+      <Navbar/>
       {posts.map(posts => (
         <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 bg-gray-100" key={posts.sys.id}>
           <Link className="text-3xl m-auto" href={'/blogs/' + posts.fields.slug}>

@@ -25,24 +25,25 @@ export default function Blogposts({ posts }) {
   console.log(posts)
 
   return (
-    <div className="container mx-auto px-10 mb-8 rounded ">
+    <div className="container px-10 mb-8 rounded ">
       <Navbar/>
       {posts.map(posts => (
-        <div className="grid grid-cols-1 lg:grid-cols-6 gap-8 bg-gray-100" key={posts.sys.id}>
+        <div className=" grid-cols-1 lg:grid-cols-6 gap-8 bg-gray-50 py-4" key={posts.sys.id}>
           <Link className="text-3xl m-auto" href={'/blogs/' + posts.fields.slug}>
           {posts.fields.title}
           </Link>
           
-          <img className="object-cover h-48 w-96 m-auto rounded" src={posts.fields.coverImage.fields.file.url}></img>
+          <img className="object-cover h-48 w-96 m-auto rounded py-1" src={posts.fields.coverImage.fields.file.url}></img>
           {/* <p>{posts.fields.content.content[0].content[0].value}</p> */}
           <h3 className="text-sm">{posts.fields.author.fields.name}</h3>
           <img className="w-10 rounded" src={posts.fields.author.fields.picture.fields.file.url}></img>
           <br></br>
+          <Link href={'/blogs/' + posts.fields.slug}>
           <Button
             label= {posts.fields.title}
             onClick={() => { }}
             primary
-          />
+          /></Link>
         </div>
         
       ))}

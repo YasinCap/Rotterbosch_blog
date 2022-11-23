@@ -22,19 +22,18 @@ export async function getStaticProps() {
 }
 
 export default function Blogposts({ posts }) {
-  console.log(posts)
+   console.log(posts)
 
   return (
     <div className="container px-10 mb-8 rounded ">
       <Navbar/>
       {posts.map(posts => (
-        <div className=" grid-cols-1 lg:grid-cols-6 gap-8 bg-gray-50 py-4" key={posts.sys.id}>
-          <Link className="text-3xl m-auto" href={'/blogs/' + posts.fields.slug}>
+        <div className=" grid-cols-1 lg:grid-cols-6 gap-8 py-4 hover:bg-gray-200 transition duration-300 ease-in-out" key={posts.sys.id}>
+          <Link className="text-3xl m-auto hover:bg-slate-200 hover:text-[#FAF9F6] rounded transition duration-300 ease-in-out " href={'/blogs/' + posts.fields.slug}>
           {posts.fields.title}
           </Link>
           
-          <img className="object-cover h-48 w-96 m-auto rounded py-1" src={posts.fields.coverImage.fields.file.url}></img>
-          {/* <p>{posts.fields.content.content[0].content[0].value}</p> */}
+          <img className="object-cover h-48 w-96 m-auto rounded py-1 hover:opacity-90 transition duration-300 ease-in-out " src={posts.fields.coverImage.fields.file.url}></img>
           <h3 className="text-sm">{posts.fields.author.fields.name}</h3>
           <img className="w-10 rounded" src={posts.fields.author.fields.picture.fields.file.url}></img>
           <br></br>

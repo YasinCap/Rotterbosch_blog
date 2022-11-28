@@ -84,33 +84,6 @@ export default function Blogposts({ posts }) {
   return (
     <div className="container px-10 mb-8 rounded">
       <Navbar />
-      {/* {posts.map((posts) => (
-        <div
-          className=" grid-cols-1 lg:grid-cols-6 gap-8 py-4 hover:bg-gray-200 transition duration-300 ease-in-out"
-          key={posts.sys.id}
-        >
-          <Link
-            className="text-3xl m-auto hover:bg-slate-200 hover:text-[#FAF9F6] rounded transition duration-300 ease-in-out "
-            href={"/blogs/" + posts.fields.slug}
-          >
-            {posts.fields.title}
-          </Link>
-
-          <img
-            className="object-cover h-48 w-96 m-auto rounded py-1 hover:opacity-90 transition duration-300 ease-in-out "
-            src={posts.fields.coverImage.fields.file.url}
-          ></img>
-          <h3 className="text-sm">{posts.fields.author.fields.name}</h3>
-          <img
-            className="w-10 rounded"
-            src={posts.fields.author.fields.picture.fields.file.url}
-          ></img>
-          <br></br>
-          <Link href={"/blogs/" + posts.fields.slug}>
-            <Button label={posts.fields.title} onClick={() => {}} primary />
-          </Link>
-        </div>
-      ))} */}
       <div className="relative bg-gray-50 px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28">
         <div className="absolute inset-0">
           <div className="h-1/3 bg-white sm:h-2/3" />
@@ -146,43 +119,29 @@ export default function Blogposts({ posts }) {
                         />
                       </Link>
                     </p>
-                    <a href={post.fields.title} className="mt-2 block">
-                      <p className="text-xl font-semibold text-gray-900">
-                        {post.fields.title}
-                      </p>
-                      <p className="mt-3 text-base text-gray-500">
-                        {post.fields.title}
-                      </p>
-                    </a>
+
+                    <p className="text-xl font-semibold text-gray-900">
+                      {post.fields.title}
+                    </p>
+                    <p className="mt-3 text-base text-gray-500">
+                      {post.fields.title}
+                    </p>
                   </div>
                   <div className="mt-6 flex items-center">
                     <div className="flex-shrink-0">
-                      <a href={post.fields.title}>
-                        <span className="sr-only">
-                          {post.fields.author.fields.name}
-                        </span>
-                        <img
-                          className="h-10 w-10 rounded-full"
-                          src={
-                            post.fields.author.fields.picture.fields.file.url
-                          }
-                          alt=""
-                        />
-                      </a>
+                      <span className="sr-only">
+                        {post.fields.author.fields.name}
+                      </span>
+                      <img
+                        className="h-10 w-10 rounded-full"
+                        src={post.fields.author.fields.picture.fields.file.url}
+                        alt=""
+                      />
                     </div>
                     <div className="ml-3">
                       <p className="text-sm font-medium text-gray-900">
-                        <a href={post.fields.title} className="hover:underline">
-                          {post.fields.author.fields.name}
-                        </a>
+                        {post.fields.author.fields.name}
                       </p>
-                      {/* <div className="flex space-x-1 text-sm text-gray-500">
-                        <time dateTime={post.fields.title}>
-                          {post.fields.date}
-                        </time>
-                        <span aria-hidden="true">&middot;</span>
-                        <span>{post.fields.title} read</span>
-                      </div> */}
                     </div>
                   </div>
                 </div>

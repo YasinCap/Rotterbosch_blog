@@ -129,7 +129,7 @@ export default function Blogposts({ posts }) {
                 className="flex flex-col overflow-hidden rounded-lg shadow-lg"
               >
                 <div className="flex-shrink-0">
-                  <img
+                  <image
                     className="h-48 w-full object-cover"
                     src={post.fields.coverImage.fields.file.url}
                     alt=""
@@ -161,7 +161,7 @@ export default function Blogposts({ posts }) {
                         <span className="sr-only">
                           {post.fields.author.fields.name}
                         </span>
-                        <img
+                        <image
                           className="h-10 w-10 rounded-full"
                           src={
                             post.fields.author.fields.picture.fields.file.url

@@ -2,45 +2,38 @@ import { createClient } from "contentful";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 
-//Hier wordt opnieuw de connectie gemaakt met mijn contentful space
-export async function getStaticPaths() {
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-  });
-  //Hier wordt de exclusieve functie van Contentful getEntries gebruikt, waarmee alle entries van het id post worden opgehaald.
-  const allEntries = await client.getEntries({ content_type: "post" });
-  return {
-    paths: allEntries.items.map((entry) => {
-      return {
-        params: {
-          slug: entry.fields.slug,
-          id: entry.sys.id,
-        },
-      };
-    }),
+const client = createClient({
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+});
 
-    fallback: false, // can also be true or 'blocking'
-  };
-}
-//hierin krijg je de specifieke data voor de al gemaakte specifieke path
-export async function getStaticProps(context) {
-  console.log(context);
-  const client = createClient({
-    space: process.env.CONTENTFUL_SPACE_ID,
-    accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+export const getStaticPaths = async () => {
+  const res = await client.getEntries({
+    content_type: "post",
   });
 
-  const entry = await client.getEntry(context.params);
+  const paths = res.items.map((item) => {
+    return {
+      params: { slug: item.fields.slug },
+    };
+  });
 
   return {
-    props: {
-      post: entry ?? null,
-    },
+    paths,
+    fallback: false,
+  };
+};
+
+export async function getStaticProps({ params }) {
+  const { items } = await client.getEntries({
+    content_type: "post",
+    "fields.slug": params.slug,
+  });
+
+  return {
+    props: { post: items[0] },
   };
 }
-
-//dit is de render functie
 export default function Blogposts({ post }) {
   console.log(post);
   return (
@@ -68,3 +61,44 @@ export default function Blogposts({ post }) {
     </div>
   );
 }
+
+//Hier wordt opnieuw de connectie gemaakt met mijn contentful space
+// export async function getStaticPaths() {
+//   const client = createClient({
+//     space: process.env.CONTENTFUL_SPACE_ID,
+//     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+//   });
+//   //Hier wordt de exclusieve functie van Contentful getEntries gebruikt, waarmee alle entries van het id post worden opgehaald.
+//   const allEntries = await client.getEntries({ content_type: "post" });
+//   return {
+//     paths: allEntries.items.map((entry) => {
+//       return {
+//         params: {
+//           slug: entry.fields.slug,
+//           id: entry.sys.id,
+//         },
+//       };
+//     }),
+
+//     fallback: false, // can also be true or 'blocking'
+//   };
+// }
+
+//hierin krijg je de specifieke data voor de al gemaakte specifieke path
+// export async function getStaticProps(context) {
+//   console.log(context);
+//   const client = createClient({
+//     space: process.env.CONTENTFUL_SPACE_ID,
+//     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+//   });
+
+//   const entry = await client.getEntry(context.params);
+
+//   return {
+//     props: {
+//       post: entry ?? null,
+//     },
+//   };
+// }
+
+//dit is de render functie

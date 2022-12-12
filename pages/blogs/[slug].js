@@ -43,20 +43,31 @@ export default function Blogposts({ post }) {
         className=" grid-cols-1 lg:grid-cols-6 gap-8 bg-grey-50 py-4"
         key={post.sys.id}
       >
-        <p className="text-3xl m-auto">{post.fields.title}</p>
+        <p className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+          {post.fields.title}
+        </p>
         <img
-          className="object-cover h-48 w-96 m-auto rounded py-1"
+          className="object-cover m-auto rounded py-1"
           src={post.fields.coverImage.fields.file.url}
         ></img>
-        <p>{post.fields.content.content[0].content[0].value}</p>
+        <p className="text-lg font-medium text-gray-900 dark:text-white">
+          {post.fields.content.content[0].content[0].value}
+        </p>
         <br></br>
-        <h3 className="text-sm">{post.fields.author.fields.name}</h3>
-        <img
-          className="w-10 rounded"
-          src={post.fields.author.fields.picture.fields.file.url}
-        ></img>{" "}
-        <p className="text-sm">{post.fields.date}</p>
-        <br></br>
+        <h3 className="font-medium dark:text-white">
+          {post.fields.author.fields.name}
+        </h3>
+        <div className="flex items-center space-x-4">
+          <img
+            className="w-10 h-10 rounded-full"
+            src={post.fields.author.fields.picture.fields.file.url}
+          ></img>
+          <div>
+            <p className="text-sm text-black-500 font-bold">
+              {post.fields.date}
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

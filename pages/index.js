@@ -59,7 +59,7 @@ export default function Blogposts({ posts }) {
                     <p className="text-sm font-medium text-indigo-600">
                       <Link href={"/blogs/" + post.fields.slug}>
                         <Button // dit is de button die uit Storybook komt, daarvoor importeren we bovenaan het bestand eerst de button uit de component folder
-                          label={post.fields.excerpt}
+                          label={post.fields.title}
                           onClick={() => {}}
                           primary
                         />
@@ -70,7 +70,7 @@ export default function Blogposts({ posts }) {
                       {post.fields.title}
                     </p>
                     <p className="mt-3 text-base text-gray-500">
-                      {post.fields.cliffhanger}
+                      {post.fields.title}
                     </p>
                   </div>
                   <div className="mt-6 flex items-center">

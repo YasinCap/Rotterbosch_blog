@@ -67,7 +67,7 @@ export default function Blogposts({ posts }) {
                       {post.fields.title}
                     </p>
                     <p className="mt-3 text-base text-gray-500">
-                      {post.fields.title}
+                      {post.fields.cliffhanger}
                     </p>
                   </div>
                   <div className="mt-6 flex items-center">

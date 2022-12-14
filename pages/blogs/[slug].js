@@ -47,11 +47,11 @@ export default function Blogposts({ post }) {
           {post.fields.title}
         </p>
         <img
-          className="object-cover m-auto rounded py-1"
+          className="object-contain h-48 w-96"
           src={post.fields.coverImage.fields.file.url}
         ></img>
         <p className="text-lg font-medium text-gray-900 dark:text-white">
-          {post.fields.content.content[0].content[0].value}
+          {post.fields.description}
         </p>
         <br></br>
         <h3 className="font-medium dark:text-white">

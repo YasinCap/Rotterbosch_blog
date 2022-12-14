@@ -57,10 +57,8 @@ export default function Blogposts({ posts }) {
                 <div className="flex flex-1 flex-col justify-between bg-white p-6">
                   <div className="flex-1">
                     <Link href={"/blogs/" + post.fields.slug}>
-                      {post.fields.excerpt}
-
                       <Button // dit is de button die uit Storybook komt, daarvoor importeren we bovenaan het bestand eerst de button uit de component folder
-                        label={"hallo"}
+                        text={post.fields.excerpt}
                         onClick={() => {}}
                         primary
                       />

@@ -43,14 +43,14 @@ export default function Blogposts({ post }) {
         className=" grid-cols-1 lg:grid-cols-6 gap-8 bg-grey-50 py-4"
         key={post.sys.id}
       >
-        <p className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        <p className="mb-4 text-4xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
           {post.fields.title}
         </p>
         <img
           className="object-contain h-48 w-96"
           src={post.fields.coverImage.fields.file.url}
         ></img>
-        <p className="text-lg font-medium text-gray-900 dark:text-white">
+        <p className="text-lg font-small text-white-400 px-7 py-7">
           {post.fields.description}
         </p>
         <br></br>

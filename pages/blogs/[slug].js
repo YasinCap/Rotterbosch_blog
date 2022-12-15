@@ -2,16 +2,17 @@ import { createClient } from "contentful";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 
+// Here I make the connction with my contentful space
 const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_KEY,
 });
-
+// Here again I use getstaticpaths function from Contentful, where I make sure all my posts are retrieved.
 export const getStaticPaths = async () => {
   const res = await client.getEntries({
     content_type: "post",
   });
-
+  // Here is route through my data and make sure to fill slug, which I will use for the paths
   const paths = res.items.map((item) => {
     return {
       params: { slug: item.fields.slug },
@@ -34,6 +35,7 @@ export async function getStaticProps({ params }) {
     props: { post: items[0] },
   };
 }
+// This is the render function, where i handle my data and decide how to render it with TailwindCSS
 export default function Blogposts({ post }) {
   console.log(post);
   return (
@@ -72,44 +74,3 @@ export default function Blogposts({ post }) {
     </div>
   );
 }
-
-//Hier wordt opnieuw de connectie gemaakt met mijn contentful space
-// export async function getStaticPaths() {
-//   const client = createClient({
-//     space: process.env.CONTENTFUL_SPACE_ID,
-//     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-//   });
-//   //Hier wordt de exclusieve functie van Contentful getEntries gebruikt, waarmee alle entries van het id post worden opgehaald.
-//   const allEntries = await client.getEntries({ content_type: "post" });
-//   return {
-//     paths: allEntries.items.map((entry) => {
-//       return {
-//         params: {
-//           slug: entry.fields.slug,
-//           id: entry.sys.id,
-//         },
-//       };
-//     }),
-
-//     fallback: false, // can also be true or 'blocking'
-//   };
-// }
-
-//hierin krijg je de specifieke data voor de al gemaakte specifieke path
-// export async function getStaticProps(context) {
-//   console.log(context);
-//   const client = createClient({
-//     space: process.env.CONTENTFUL_SPACE_ID,
-//     accessToken: process.env.CONTENTFUL_ACCESS_KEY,
-//   });
-
-//   const entry = await client.getEntry(context.params);
-
-//   return {
-//     props: {
-//       post: entry ?? null,
-//     },
-//   };
-// }
-
-//dit is de render functie

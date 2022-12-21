@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
+import { Button } from "../../components/components/src/stories/Button";
 
 // Here I make the connction with my contentful space
 const client = createClient({
@@ -68,6 +69,13 @@ export default function Blogposts({ post }) {
             <p className="text-sm text-black-500 font-bold">
               {post.fields.date}
             </p>
+            <Link href={"/"}>
+              <Button // dit is de button die uit Storybook komt, daarvoor importeren we bovenaan het bestand eerst de button uit de component folder
+                text={"Terug"}
+                onClick={() => {}}
+                primary
+              />
+            </Link>
           </div>
         </div>
       </div>

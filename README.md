@@ -7,7 +7,9 @@ and installing the packages,
 
 git clone https://github.com/YasinCap/Rotterbosch_blog
 npm install
+
 Because your project is cloned with a submodule, you will get an empty "components" folder, make sure that these two commands are executed: git submodule init to you initialize the local configuration file, and git submodule update to you get all the data from the subproject .
+
 npm run dev
 
 To run the dev server:

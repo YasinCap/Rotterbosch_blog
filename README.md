@@ -7,6 +7,7 @@ and installing the packages,
 
 git clone https://github.com/YasinCap/Rotterbosch_blog
 npm install
+Because your project is cloned with a submodule, you will get an empty "components" folder, make sure that these two commands are executed: git submodule init to you initialize the local configuration file, and git submodule update to you get all the data from the subproject .
 npm run dev
 
 To run the dev server:
@@ -27,6 +28,36 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 
 To build the site use
 npm run build
+
+## Enviroment variabelen
+
+Voor dit project moet je gebruik maken van Enviroment Variabelen, normaal gesproken zaten je API keys in de code van het project dit is echter niet veilig.
+
+1. Maak een nieuw bestand aan genaamd .env.local
+2. CONTENTFUL_SPACE_ID="Jou Space ID"
+   CONTENTFUL_ACCESS_KEY="Jou access key"
+
+3. Zorg ervoor dat
+   //# local env files
+   .env\*.local// in je git ignore staat
+
+4. Bij het gebruik van de api keys vul je de titels van de variabelen in ipv de letterlijke keys.
+
+## Activate submodule after cloning
+
+For this project you have to use environment variables, normally your API keys are in the code of the project but this is not secure.
+
+1. Create a new file called .env.local
+2. CONTENTFUL_SPACE_ID="Your space ID"
+   CONTENTFUL_ACCESS_KEY="Your access key"
+
+   put this in your file
+
+3. Make sure
+   //# local env files
+   .env\*.local// in your .gitignore
+
+4. When using the api keys, enter the titles of the variables instead of the literal keys.
 
 ## Deploy on Netlify
 

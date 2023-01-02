@@ -28,7 +28,7 @@ export default function Blogposts({ posts }) {
 
   // Hieronder staat in HTML hoe de opgehaalde data (posts) gerenderd wordt op de website
   return (
-    <div className="container px-10 mb-8 rounded">
+    <div className="container px-auto m-auto rounded">
       <Navbar />
       <div className="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28 ">
         <div className="absolute inset-0">

@@ -40,7 +40,7 @@ export async function getStaticProps({ params }) {
 export default function Blogposts({ post }) {
   console.log(post);
   return (
-    <div className="container px-10 mb-8 rounded ">
+    <div className="container px-10 m-auto rounded ">
       <Navbar></Navbar>
       <div
         className=" grid-cols-1 lg:grid-cols-6 gap-8 bg-grey-50 py-4 px-6"
@@ -50,10 +50,10 @@ export default function Blogposts({ post }) {
           {post.fields.title}
         </p>
         <img
-          className="object-contain h-48 w-96"
+          className="object-contain m-auto"
           src={post.fields.coverImage.fields.file.url}
         ></img>
-        <p className="text-lg font-small text-white-400 py-7">
+        <p className="text-lg font-small text-white-400 pt-5  whitespace-pre-line ">
           {post.fields.description}
         </p>
         <br></br>

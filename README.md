@@ -31,6 +31,8 @@ The `pages/api` directory is mapped to `/api/*`. Files in this directory are tre
 To build the site use
 npm run build
 
+## Contentful opzetten
+
 ## Enviroment variabelen
 
 Voor dit project moet je gebruik maken van Enviroment Variabelen, normaal gesproken zaten je API keys in de code van het project dit is echter niet veilig.

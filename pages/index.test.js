@@ -1,5 +1,6 @@
 import React from "react";
-import { render, expect } from "@testing-library/react";
+import { render } from "@testing-library/react";
+import { describe, expect } from "@jest/globals";
 import { toBeInTheDocument } from "@testing-library/jest-dom";
 import Navbar from "../components/Navbar";
 

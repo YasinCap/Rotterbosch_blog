@@ -43,7 +43,7 @@ export default function Blogposts({ post }) {
     <div className="container px-10 mb-8 rounded ">
       <Navbar></Navbar>
       <div
-        className=" grid-cols-1 lg:grid-cols-6 gap-8 bg-grey-50 py-4"
+        className=" grid-cols-1 lg:grid-cols-6 gap-8 bg-grey-50 py-4 px-6"
         key={post.sys.id}
       >
         <p className="mb-4 text-4xl font-extrabold text-center tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
@@ -53,7 +53,7 @@ export default function Blogposts({ post }) {
           className="object-contain h-48 w-96"
           src={post.fields.coverImage.fields.file.url}
         ></img>
-        <p className="text-lg font-small text-white-400 px-7 py-7">
+        <p className="text-lg font-small text-white-400 py-7">
           {post.fields.description}
         </p>
         <br></br>

@@ -1,10 +1,10 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import { describe, expect } from "@jest/globals";
+
 import { toBeInTheDocument } from "@testing-library/jest-dom";
 import Navbar from "../components/Navbar";
 
-import Blogposts from ".";
+import Blogposts from "../pages";
 import { mockPosts } from "./index.mock.js";
 
 describe("Navbar", () => {

@@ -50,10 +50,10 @@ export default function Blogposts({ post }) {
           {post.fields.title}
         </p>
         <img
-          className="object-contain m-auto"
+          className=" max-w-lg max-h-lg m-auto rounded"
           src={post.fields.coverImage.fields.file.url}
         ></img>
-        <p className="text-lg font-small text-white-400 pt-5  whitespace-pre-line ">
+        <p className="text-lg font-small text-white-400 py-5  whitespace-pre-line ">
           {post.fields.description}
         </p>
         <br></br>

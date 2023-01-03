@@ -38,11 +38,12 @@ CONTENTFUL_ACCESS_KEY="Your access key"
 
 Make sure the following is included in your .gitignore file:
 
-# local env files
-
 .env\*.local
+
 When using the API keys, use the titles of the variables instead of the literal keys.
-Deploying on Netlify
+
+# Deploying on Netlify
+
 Use the following documentation to deploy the website on Netlify:
 https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/
 

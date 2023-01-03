@@ -7,25 +7,33 @@ This is a Next.js project with a Storybook submodule (with its own readme)
 Clone this repository and install the packages:
 
 git clone https://github.com/YasinCap/Rotterbosch_blog
+
 npm install
 
 Initialize the submodule and get all the data from the subproject:
 
 git submodule init
+
 git submodule update
+
 Start the dev server:
 
 npm run dev
+
 Open http://localhost:3000 in your browser to view the app.
 
 # To build the site:
 
 npm run build
-Setting up Contentful
+
+# Setting up Contentful
+
 Create a file called .env.local
+
 Add the following environment variables to the file:
 
 CONTENTFUL_SPACE_ID="Your space ID"
+
 CONTENTFUL_ACCESS_KEY="Your access key"
 
 Make sure the following is included in your .gitignore file:

@@ -56,17 +56,6 @@ export default function Blogposts({ post }) {
         <p className="text-lg font-small text-white-400 py-5  whitespace-pre-line ">
           {post.fields.description}
         </p>
-        <video width="320" height="240" controls>
-          <source
-            src={post.fields.videoOfFoto.fields.file.url}
-            type="video/mp4"
-          />{" "}
-          <source
-            src={post.fields.videoOfFoto.fields.file.url}
-            type="video/ogg"
-          />{" "}
-          Your browser does not support the video tag.
-        </video>
         <br></br>
         <h3 className="font-medium dark:text-white">
           {post.fields.author.fields.name}

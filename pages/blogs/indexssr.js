@@ -27,7 +27,7 @@ export default function Blogposts({ posts }) {
   console.log(posts[0].fields.videoOfFoto.fields.file.url);
 
   // Hieronder staat in HTML hoe de opgehaalde data (posts) gerenderd wordt op de website
-  rreturn(
+  return (
     <div className="container px-auto m-auto rounded">
       <Navbar />
       <div className="relative px-4 pt-16 pb-20 sm:px-6 lg:px-8 lg:pt-24 lg:pb-28 ">

@@ -60,6 +60,16 @@ export default function Blogposts() {
                     <p className="text-xl font-semibold text-gray-900">
                       {post.fields.title}
                     </p>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
                     <p className="mt-3 text-base text-gray-500">
                       {post.fields.cliffhanger}
                     </p>

@@ -31,7 +31,7 @@ export default function Blogposts() {
         <div className="relative mx-auto max-w-7xl " title="cards">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Server Side Rendering
+              Client side rendering
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4"></p>
           </div>
@@ -70,6 +70,66 @@ export default function Blogposts() {
                         src={posts[0].fields.videoOfFoto.fields.file.url}
                       />
                     </video>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
                     <p className="mt-3 text-base text-gray-500">
                       {post.fields.cliffhanger}
                     </p>
@@ -126,6 +186,16 @@ export default function Blogposts() {
                     <p className="text-xl font-semibold text-gray-900">
                       {post.fields.title}
                     </p>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
                     <video
                       autoPlay
                       muted
@@ -268,6 +338,16 @@ export default function Blogposts() {
                         src={posts[0].fields.videoOfFoto.fields.file.url}
                       />
                     </video>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
                     <p className="mt-3 text-base text-gray-500">
                       {post.fields.cliffhanger}
                     </p>
@@ -324,6 +404,16 @@ export default function Blogposts() {
                     <p className="text-xl font-semibold text-gray-900">
                       {post.fields.title}
                     </p>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
                     <video
                       autoPlay
                       muted

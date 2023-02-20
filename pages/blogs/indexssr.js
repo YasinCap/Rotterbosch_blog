@@ -69,7 +69,6 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
-                      loop
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -79,7 +78,6 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
-                      loop
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -89,7 +87,6 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
-                      loop
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -99,7 +96,6 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
-                      loop
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -109,7 +105,6 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
-                      loop
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -119,7 +114,6 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
-                      loop
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -129,7 +123,6 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
-                      loop
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -139,7 +132,6 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
-                      loop
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source

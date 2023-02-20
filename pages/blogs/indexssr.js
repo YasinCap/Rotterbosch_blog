@@ -37,7 +37,7 @@ export default function Blogposts({ posts }) {
         <div className="relative mx-auto max-w-7xl " title="cards">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Server Side Rendering
+              Client Side Rendering
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4"></p>
           </div>
@@ -132,6 +132,16 @@ export default function Blogposts({ posts }) {
                     <p className="text-xl font-semibold text-gray-900">
                       {post.fields.title}
                     </p>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
                     <p className="mt-3 text-base text-gray-500">
                       {post.fields.cliffhanger}
                     </p>
@@ -188,6 +198,16 @@ export default function Blogposts({ posts }) {
                     <p className="text-xl font-semibold text-gray-900">
                       {post.fields.title}
                     </p>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
                     <p className="mt-3 text-base text-gray-500">
                       {post.fields.cliffhanger}
                     </p>
@@ -244,6 +264,82 @@ export default function Blogposts({ posts }) {
                     <p className="text-xl font-semibold text-gray-900">
                       {post.fields.title}
                     </p>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
+                    <p className="mt-3 text-base text-gray-500">
+                      {post.fields.cliffhanger}
+                    </p>
+                  </div>
+                  <div className="mt-6 flex items-center">
+                    <div className="flex-shrink-0">
+                      <span className="sr-only">
+                        {post.fields.author.fields.name}
+                      </span>
+                      <img
+                        className="h-10 w-10 rounded-full"
+                        src={post.fields.author.fields.picture.fields.file.url}
+                        alt=""
+                      />
+                    </div>
+                    <div className="ml-3">
+                      <p className="text-sm font-medium text-gray-900">
+                        {post.fields.author.fields.name}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="relative mx-auto max-w-7xl " title="cards">
+          <div className="text-center">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"></h2>
+            <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4"></p>
+          </div>
+          <div className="mx-auto mt-12 grid max-w-lg gap-5 lg:max-w-none lg:grid-cols-3 ">
+            {posts.map((post) => (
+              <div
+                key={post.fields.title}
+                className="flex flex-col overflow-hidden rounded-lg shadow-md hover:shadow-xl transition ease-in-out"
+              >
+                <div className="flex-shrink-0">
+                  <img
+                    className="h-48 w-full object-cover"
+                    src={post.fields.coverImage.fields.file.url}
+                    alt=""
+                  />
+                </div>
+                <div className="flex flex-1 flex-col justify-between bg-white p-6">
+                  <div className="flex-1">
+                    <Link href={"/blogs/" + post.fields.slug}>
+                      <Button // dit is de button die uit Storybook komt, daarvoor importeren we bovenaan het bestand eerst de button uit de component folder
+                        text={post.fields.excerpt}
+                        onClick={() => {}}
+                        primary
+                      />
+                    </Link>
+                    <p className="text-xl font-semibold text-gray-900">
+                      {post.fields.title}
+                    </p>
+                    <video
+                      autoPlay
+                      muted
+                      loop
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
                     <p className="mt-3 text-base text-gray-500">
                       {post.fields.cliffhanger}
                     </p>

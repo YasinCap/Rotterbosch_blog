@@ -81,7 +81,16 @@ export default function Blogposts({ posts }) {
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
-                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                        src={posts[1].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
+                    <video
+                      autoPlay
+                      muted
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[2].fields.videoOfFoto.fields.file.url}
                       />
                     </video>
                     <video
@@ -99,7 +108,16 @@ export default function Blogposts({ posts }) {
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
-                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                        src={posts[1].fields.videoOfFoto.fields.file.url}
+                      />
+                    </video>
+                    <video
+                      autoPlay
+                      muted
+                      style={{ width: "500px", height: "500px" }}
+                    >
+                      <source
+                        src={posts[2].fields.videoOfFoto.fields.file.url}
                       />
                     </video>
                     <video
@@ -117,7 +135,7 @@ export default function Blogposts({ posts }) {
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
-                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                        src={posts[1].fields.videoOfFoto.fields.file.url}
                       />
                     </video>
                     <video
@@ -126,25 +144,7 @@ export default function Blogposts({ posts }) {
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
-                        src={posts[0].fields.videoOfFoto.fields.file.url}
-                      />
-                    </video>
-                    <video
-                      autoPlay
-                      muted
-                      style={{ width: "500px", height: "500px" }}
-                    >
-                      <source
-                        src={posts[0].fields.videoOfFoto.fields.file.url}
-                      />
-                    </video>
-                    <video
-                      autoPlay
-                      muted
-                      style={{ width: "500px", height: "500px" }}
-                    >
-                      <source
-                        src={posts[0].fields.videoOfFoto.fields.file.url}
+                        src={posts[2].fields.videoOfFoto.fields.file.url}
                       />
                     </video>
                     <video

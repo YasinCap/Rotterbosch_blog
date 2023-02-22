@@ -69,6 +69,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -78,6 +79,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -87,6 +89,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -96,6 +99,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -105,6 +109,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -114,6 +119,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -123,6 +129,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -132,6 +139,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -141,6 +149,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -150,6 +159,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -159,6 +169,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -168,6 +179,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -177,6 +189,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -186,6 +199,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -195,6 +209,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -204,6 +219,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -213,6 +229,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -222,6 +239,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -231,6 +249,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -240,6 +259,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -258,6 +278,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -267,6 +288,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -276,6 +298,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source
@@ -285,6 +308,7 @@ export default function Blogposts({ posts }) {
                     <video
                       autoPlay
                       muted
+                      preload="auto"
                       style={{ width: "500px", height: "500px" }}
                     >
                       <source

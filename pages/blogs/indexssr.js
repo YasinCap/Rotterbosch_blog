@@ -67,16 +67,6 @@ export default function Blogposts({ posts }) {
                       {post.fields.title}
                     </p>
 
-                    <video
-                      autoPlay
-                      muted
-                      style={{ width: "500px", height: "500px" }}
-                    >
-                      <source
-                        src={posts[0].fields.videoOfFoto.fields.file.url}
-                      />
-                    </video>
-
                     <p className="mt-3 text-base text-gray-500">
                       {post.fields.cliffhanger}
                     </p>

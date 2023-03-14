@@ -1,4 +1,3 @@
-import { createClient } from "contentful";
 import { Button } from "../../components/components/src/stories/Button";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
@@ -6,17 +5,14 @@ import React, { useState, useEffect } from "react";
 
 export default function Blogposts() {
   const [posts, setPosts] = useState([]);
-  // keys aanpassen
-  useEffect(() => {
-    const client = createClient({
-      space: process.env.NEXT_PUBLIC_CONTENTFUL_SPACE_ID,
-      accessToken: process.env.NEXT_PUBLIC_CONTENTFUL_ACCESS_KEY,
-    });
 
-    client
-      .getEntries({ content_type: "post" })
-      .then((res) => setPosts(res.items))
-      .catch((error) => console.error(error));
+  useEffect(() => {
+    async function fetchPosts() {
+      const response = await fetch("/api/contentful");
+      const data = await response.json();
+      setPosts(data);
+    }
+    fetchPosts();
   }, []);
 
   console.log(posts);
@@ -31,7 +27,7 @@ export default function Blogposts() {
         <div className="relative mx-auto max-w-7xl " title="cards">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-              Client side rendering
+              Server side rendering
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-xl text-gray-500 sm:mt-4"></p>
           </div>

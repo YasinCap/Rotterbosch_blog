@@ -6,6 +6,6 @@ const client = createClient({
 });
 
 export default async function handler(req, res) {
-  const entries = await client.getEntries();
+  const entries = await client.getEntries({ content_type: "post" });
   res.status(200).json(entries.items);
 }
